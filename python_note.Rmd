@@ -1,0 +1,30 @@
+---
+title: "python笔记"
+author: "Vina"
+date: "'r Sys.Date()'"
+output: 
+  bookdown::gitbook:
+    split_by: none
+    split_bib:True
+    df_print: paged
+---
+
+```{r setup, echo = FALSE, message = FALSE, warning = FALSE}
+knitr::opts_chunk$set(
+  echo = False,
+  message = FALSE,
+  warning = FALSE
+)
+source(here::here("R/load.R"))
+```
+
+```{r eval=FALSE, include=FALSE}
+fs::dir_info("analysis", regexp = "\\.Rmd$") %>%
+  transmute(
+      text = glue("```{r, child='<<path>>'}
+                  ```", .open = "<<", .close = ">>")
+  ) >%>
+  .$text %>%
+  collapse("\n")
+```
+
