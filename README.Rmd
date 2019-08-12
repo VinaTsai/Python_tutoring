@@ -1,0 +1,41 @@
+---
+title: Python_tutoring
+author: Vina
+date: '`r Sys.Date()`'
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+采用
+    [文学编程](https://jiaxiangbu.github.io/learn_rmd/literate-prog.html)
+的方式，记录学习python的上课笔记，主要记录
+
+1. 常规用法
+1. 简要总结
+
+## 更新笔记
+
+```{r eval=FALSE, include=FALSE}
+rstudioapi::jobRunScript("R/build.R", encoding = "UTF-8", workingDir = ".")
+```
+
+***
+
+<h4 align="center">**Code of Conduct**</h4>
+
+<h6 align="center">Please note that the 'Python_tutoring' project is released with a
+[Contributor Code of Conduct](CODE_OF_CONDUCT.md).
+By contributing to this project, you agree to abide by its terms.</h6>
+
+<h4 align="center">**License**</h4>
+
+<h6 align="center">CC-BY-4.0 &copy; [Vina Tsai](LICENSE.md)</h6>
+

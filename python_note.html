@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>python笔记</title>
+  <meta name="description" content="python笔记" />
+  <meta name="generator" content="bookdown 0.12 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="python笔记" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="python笔记" />
+  
+  
+  
+
+<meta name="author" content="Vina" />
+
+
+<meta name="date" content="2019-08-12" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+<link href="libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
+<script src="libs/pagedtable-1.1/js/pagedtable.js"></script>
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path=""><a href="#section"><i class="fa fa-check"></i><b>1</b> 基本语法</a><ul>
+<li class="chapter" data-level="1.1" data-path=""><a href="#print"><i class="fa fa-check"></i><b>1.1</b> print()函数</a></li>
+<li class="chapter" data-level="1.2" data-path=""><a href="#section-1"><i class="fa fa-check"></i><b>1.2</b> 转义字符：用+需要转义的功能的英文首字母</a></li>
+<li class="chapter" data-level="1.3" data-path=""><a href="#section-2"><i class="fa fa-check"></i><b>1.3</b> 变量与赋值</a><ul>
+<li class="chapter" data-level="1.3.1" data-path=""><a href="#section-3"><i class="fa fa-check"></i><b>1.3.1</b> 变量命名规范</a></li>
+<li class="chapter" data-level="1.3.2" data-path=""><a href="#section-4"><i class="fa fa-check"></i><b>1.3.2</b> 赋值用<strong>=</strong>表示</a></li>
+<li class="chapter" data-level="1.3.3" data-path=""><a href="#section-5"><i class="fa fa-check"></i><b>1.3.3</b> 变量的最终值为最后的赋值</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path=""><a href="#section-6"><i class="fa fa-check"></i><b>1.4</b> 数据类型</a></li>
+<li class="chapter" data-level="1.5" data-path=""><a href="#if-"><i class="fa fa-check"></i><b>1.5</b> if 条件判断</a><ul>
+<li class="chapter" data-level="1.5.1" data-path=""><a href="#section-7"><i class="fa fa-check"></i><b>1.5.1</b> 条件判断</a></li>
+<li class="chapter" data-level="1.5.2" data-path=""><a href="#if"><i class="fa fa-check"></i><b>1.5.2</b> if嵌套</a></li>
+</ul></li>
+<li class="chapter" data-level="1.6" data-path=""><a href="#input"><i class="fa fa-check"></i><b>1.6</b> input()函数</a><ul>
+<li class="chapter" data-level="1.6.1" data-path=""><a href="#section-8"><i class="fa fa-check"></i><b>1.6.1</b> 有问有答，有来有往</a></li>
+<li class="chapter" data-level="1.6.2" data-path=""><a href="#section-9"><i class="fa fa-check"></i><b>1.6.2</b> 赋值后使用</a></li>
+<li class="chapter" data-level="1.6.3" data-path=""><a href="#section-10"><i class="fa fa-check"></i><b>1.6.3</b> 交互沟通</a></li>
+</ul></li>
+<li class="chapter" data-level="1.7" data-path=""><a href="#list1"><i class="fa fa-check"></i><b>1.7</b> 列表list1()</a><ul>
+<li class="chapter" data-level="1.7.1" data-path=""><a href="#section-11"><i class="fa fa-check"></i><b>1.7.1</b> 基本定义</a></li>
+<li class="chapter" data-level="1.7.2" data-path=""><a href="#section-12"><i class="fa fa-check"></i><b>1.7.2</b> 提取元素</a></li>
+<li class="chapter" data-level="1.7.3" data-path=""><a href="#section-13"><i class="fa fa-check"></i><b>1.7.3</b> 增／删元素</a></li>
+</ul></li>
+<li class="chapter" data-level="1.8" data-path=""><a href="#tuple"><i class="fa fa-check"></i><b>1.8</b> 元组tuple()</a></li>
+<li class="chapter" data-level="1.9" data-path=""><a href="#section-14"><i class="fa fa-check"></i><b>1.9</b> 字典</a><ul>
+<li class="chapter" data-level="1.9.1" data-path=""><a href="#section-15"><i class="fa fa-check"></i><b>1.9.1</b> 基本定义</a></li>
+<li class="chapter" data-level="1.9.2" data-path=""><a href="#section-16"><i class="fa fa-check"></i><b>1.9.2</b> 提取元素</a></li>
+<li class="chapter" data-level="1.9.3" data-path=""><a href="#section-17"><i class="fa fa-check"></i><b>1.9.3</b> 增／删元素</a></li>
+</ul></li>
+<li class="chapter" data-level="1.10" data-path=""><a href="#section-18"><i class="fa fa-check"></i><b>1.10</b> 列表和字典的对比</a></li>
+<li class="chapter" data-level="1.11" data-path=""><a href="#forin"><i class="fa fa-check"></i><b>1.11</b> for…in…循环语句</a><ul>
+<li class="chapter" data-level="1.11.1" data-path=""><a href="#range"><i class="fa fa-check"></i><b>1.11.1</b> 与range()函数配合</a></li>
+</ul></li>
+<li class="chapter" data-level="1.12" data-path=""><a href="#while"><i class="fa fa-check"></i><b>1.12</b> while循环</a></li>
+<li class="chapter" data-level="1.13" data-path=""><a href="#forinwhile"><i class="fa fa-check"></i><b>1.13</b> for…in…和while…异同点</a></li>
+<li class="chapter" data-level="1.14" data-path=""><a href="#section-19"><i class="fa fa-check"></i><b>1.14</b> 布尔值：用数据做判断</a><ul>
+<li class="chapter" data-level="1.14.1" data-path=""><a href="#truefalse"><i class="fa fa-check"></i><b>1.14.1</b> True和False（注意区分大小写）</a></li>
+<li class="chapter" data-level="1.14.2" data-path=""><a href="#section-20"><i class="fa fa-check"></i><b>1.14.2</b> 总结</a></li>
+</ul></li>
+<li class="chapter" data-level="1.15" data-path=""><a href="#section-21"><i class="fa fa-check"></i><b>1.15</b> 四种语句</a><ul>
+<li class="chapter" data-level="1.15.1" data-path=""><a href="#break"><i class="fa fa-check"></i><b>1.15.1</b> break语句</a></li>
+<li class="chapter" data-level="1.15.2" data-path=""><a href="#continue"><i class="fa fa-check"></i><b>1.15.2</b> continue语句</a></li>
+</ul></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">python笔记</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">python笔记</h1>
+<p class="author"><em>Vina</em></p>
+<p class="date"><em>2019-08-12</em></p>
+</div>
+<p>基本内容是来源于<a href="http://pypypy.cn">风变编程</a>中的学习笔记，之后会根据日常接触的知识点进行更新。</p>
+<div id="section" class="section level1">
+<h1><span class="header-section-number">1</span> 基本语法</h1>
+<div id="print" class="section level2">
+<h2><span class="header-section-number">1.1</span> print()函数</h2>
+<p>放置字符串，可以用<strong>''</strong>(单引号),<strong>'‘'<strong>（双引号，不是两个单引号）或</strong>'’‘'’’</strong>（三引号，三个单引号）</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb1-1" title="1"><span class="bu">print</span>(<span class="st">&#39;你好&#39;</span>)</a>
+<a class="sourceLine" id="cb1-2" title="2"><span class="bu">print</span>(<span class="st">&quot;Let&#39;s Go&quot;</span>)</a></code></pre></div>
+<p><strong>Note</strong>:
+括号内同时存在单双引号，使用""。
+括号内有一大串文字，且实现换行，有两种方法：1.用***放置于每一段段首；2.在已分好段的文字前后使用<strong>’’’ ’’’</strong>。</p>
+</div>
+<div id="section-1" class="section level2">
+<h2><span class="header-section-number">1.2</span> 转义字符：用+需要转义的功能的英文首字母</h2>
+<p><img src="figure/01-01-ECS.png" /><!-- --></p>
+</div>
+<div id="section-2" class="section level2">
+<h2><span class="header-section-number">1.3</span> 变量与赋值</h2>
+<div id="section-3" class="section level3">
+<h3><span class="header-section-number">1.3.1</span> 变量命名规范</h3>
+<p>1.只能包含字母、数字和下划线；
+2.不能以数字开头</p>
+</div>
+<div id="section-4" class="section level3">
+<h3><span class="header-section-number">1.3.2</span> 赋值用<strong>=</strong>表示</h3>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb2-1" title="1"><span class="co">#赋值</span></a>
+<a class="sourceLine" id="cb2-2" title="2">a<span class="op">=</span><span class="dv">1</span></a>
+<a class="sourceLine" id="cb2-3" title="3"><span class="co">#等于</span></a>
+<a class="sourceLine" id="cb2-4" title="4">a<span class="op">==</span><span class="dv">1</span></a></code></pre></div>
+</div>
+<div id="section-5" class="section level3">
+<h3><span class="header-section-number">1.3.3</span> 变量的最终值为最后的赋值</h3>
+</div>
+</div>
+<div id="section-6" class="section level2">
+<h2><span class="header-section-number">1.4</span> 数据类型</h2>
+<p>1.字符串 str()</p>
+<p>将其他类型转成字符串（也可以用<strong>’’</strong>直接转换字符内容)</p>
+<p>2.整数 int()</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb3-1" title="1"><span class="bu">print</span>(<span class="dv">123</span>)</a>
+<a class="sourceLine" id="cb3-2" title="2"><span class="co"># 结果为 123</span></a>
+<a class="sourceLine" id="cb3-3" title="3"><span class="bu">print</span>(<span class="dv">1</span><span class="op">+</span><span class="dv">2</span><span class="op">*</span><span class="dv">123</span>)</a>
+<a class="sourceLine" id="cb3-4" title="4"><span class="co"># 结果为 124</span></a></code></pre></div>
+<p>将其他类型转成整数：
+1)整数字符串：int(‘123’) 为 123 （文字形式不可以转换）
+2)浮点数：int(2.1) 为 2
+3)小数形式的字符串，不可以直接用int()转换</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb4-1" title="1"><span class="bu">print</span>(<span class="bu">int</span>(<span class="bu">float</span>(<span class="st">&#39;12.21&#39;</span>)))</a>
+<a class="sourceLine" id="cb4-2" title="2"><span class="co">#结果为 12</span></a>
+<a class="sourceLine" id="cb4-3" title="3"></a>
+<a class="sourceLine" id="cb4-4" title="4"><span class="bu">print</span>(<span class="bu">int</span>(<span class="st">&#39;12.21&#39;</span>))</a>
+<a class="sourceLine" id="cb4-5" title="5"><span class="co">#结果报错：error: invalid syntax</span></a></code></pre></div>
+<p>3.浮点数 float():带小数点的数字</p>
+<p>1)数字字符串：float(‘2’), float(‘2.1’)
+2)整数：float(1)</p>
+<p>4.查询数据类型 type()</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb5-1" title="1"><span class="bu">print</span>(<span class="bu">type</span>(<span class="st">&#39;查询内容&#39;</span>))</a></code></pre></div>
+<p>##数据拼接</p>
+<p>只有字符串才可以拼接，用<strong>+</strong>链接</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb6-1" title="1"><span class="bu">print</span>(<span class="st">&#39;1&#39;</span><span class="op">+</span><span class="st">&#39;abc&#39;</span><span class="op">+</span><span class="st">&#39;好啊&#39;</span>)</a>
+<a class="sourceLine" id="cb6-2" title="2"><span class="co">#结果为 1abc好啊</span></a></code></pre></div>
+</div>
+<div id="if-" class="section level2">
+<h2><span class="header-section-number">1.5</span> if 条件判断</h2>
+<div id="section-7" class="section level3">
+<h3><span class="header-section-number">1.5.1</span> 条件判断</h3>
+<p>1.单向判断: if
+1.双向判断: if…else(不需加条件，表示其他)…
+1.多向判断: if…elif…(else…)</p>
+<p><strong>note</strong>: …的内容需要缩进。</p>
+</div>
+<div id="if" class="section level3">
+<h3><span class="header-section-number">1.5.2</span> if嵌套</h3>
+<p>作为嵌套，需在上一层if的基础上缩进。</p>
+<p><img src="figure/01-02-if.png" /><!-- --></p>
+</div>
+</div>
+<div id="input" class="section level2">
+<h2><span class="header-section-number">1.6</span> input()函数</h2>
+<div id="section-8" class="section level3">
+<h3><span class="header-section-number">1.6.1</span> 有问有答，有来有往</h3>
+<p>如果不输入，input()大门会一直等待被输入。</p>
+</div>
+<div id="section-9" class="section level3">
+<h3><span class="header-section-number">1.6.2</span> 赋值后使用</h3>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb7-1" title="1">number<span class="op">=</span><span class="bu">input</span>(<span class="st">&#39;请输入今天你吃的苹果数量：&#39;</span>)</a>
+<a class="sourceLine" id="cb7-2" title="2"><span class="bu">print</span>(number)</a></code></pre></div>
+<p><strong>note</strong>: 返回类型为str。若需要整数型，可以转换类型：int(input())。</p>
+</div>
+<div id="section-10" class="section level3">
+<h3><span class="header-section-number">1.6.3</span> 交互沟通</h3>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb8-1" title="1"><span class="co">#赋值：</span></a>
+<a class="sourceLine" id="cb8-2" title="2">number<span class="op">=</span><span class="bu">input</span>(<span class="st">&#39;请输入今天你吃的苹果数量：&#39;</span>)</a>
+<a class="sourceLine" id="cb8-3" title="3"></a>
+<a class="sourceLine" id="cb8-4" title="4"><span class="co">#进入嵌套式条件判断：</span></a>
+<a class="sourceLine" id="cb8-5" title="5"><span class="cf">if</span> <span class="bu">int</span>(number)<span class="op">&lt;</span><span class="dv">2</span>:</a>
+<a class="sourceLine" id="cb8-6" title="6">  <span class="bu">print</span>(<span class="st">&#39;您今日的进食不过量。&#39;</span>)</a>
+<a class="sourceLine" id="cb8-7" title="7">  <span class="cf">if</span> <span class="bu">int</span>(number)<span class="op">==</span><span class="dv">0</span>:</a>
+<a class="sourceLine" id="cb8-8" title="8">    <span class="bu">print</span>(<span class="st">&#39;您今日需要吃个苹果。&#39;</span>)</a>
+<a class="sourceLine" id="cb8-9" title="9">  <span class="cf">else</span>:</a>
+<a class="sourceLine" id="cb8-10" title="10">    <span class="bu">print</span>(<span class="st">&#39;您今日吃的苹果刚刚好，么么哒。&#39;</span>)</a>
+<a class="sourceLine" id="cb8-11" title="11"><span class="cf">else</span>:</a>
+<a class="sourceLine" id="cb8-12" title="12">  <span class="bu">print</span>(<span class="st">&#39;您再吃就会变成猪，会被杀掉的。&#39;</span>)</a>
+<a class="sourceLine" id="cb8-13" title="13"></a>
+<a class="sourceLine" id="cb8-14" title="14"><span class="bu">print</span>(<span class="st">&#39;反正无论你吃几个苹果，都改变不了你是猪的本质哈哈哈哈哈。判断完毕。&#39;</span>)</a></code></pre></div>
+</div>
+</div>
+<div id="list1" class="section level2">
+<h2><span class="header-section-number">1.7</span> 列表list1()</h2>
+<div id="section-11" class="section level3">
+<h3><span class="header-section-number">1.7.1</span> 基本定义</h3>
+<p>1.用[]；
+1.可同时包容不同类型的数据</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb9-1" title="1">list11<span class="op">=</span>[<span class="st">&#39;小明&#39;</span>, <span class="dv">18</span>, <span class="fl">2.1</span>]</a>
+<a class="sourceLine" id="cb9-2" title="2"><span class="bu">print</span>(list11)</a></code></pre></div>
+</div>
+<div id="section-12" class="section level3">
+<h3><span class="header-section-number">1.7.2</span> 提取元素</h3>
+<p>1.提取单个元素：偏移量（offset, 从0开始）
+1.提取多个元素：<strong>左右空，取到头；取左不取右</strong>。</p>
+<p><img src="figure/01-03-offset.png" /><!-- --></p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb10-1" title="1"><span class="co">#单个元素</span></a>
+<a class="sourceLine" id="cb10-2" title="2">students <span class="op">=</span> [<span class="st">&#39;小明&#39;</span>, <span class="st">&#39;小红&#39;</span>, <span class="st">&#39;小刚&#39;</span>]</a>
+<a class="sourceLine" id="cb10-3" title="3"><span class="bu">print</span>(students[<span class="dv">0</span>])</a>
+<a class="sourceLine" id="cb10-4" title="4"><span class="co">#输出：小明</span></a>
+<a class="sourceLine" id="cb10-5" title="5"></a>
+<a class="sourceLine" id="cb10-6" title="6"><span class="co">#多个元素</span></a>
+<a class="sourceLine" id="cb10-7" title="7">list1<span class="op">=</span>[<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>]</a>
+<a class="sourceLine" id="cb10-8" title="8"></a>
+<a class="sourceLine" id="cb10-9" title="9"><span class="bu">print</span>(list1[:])</a>
+<a class="sourceLine" id="cb10-10" title="10"><span class="co"># &gt;&gt; [1,2,3,4,5]</span></a>
+<a class="sourceLine" id="cb10-11" title="11"><span class="bu">print</span>(list1[<span class="dv">2</span>:])</a>
+<a class="sourceLine" id="cb10-12" title="12"><span class="co"># &gt;&gt; [3,4,5]</span></a>
+<a class="sourceLine" id="cb10-13" title="13"><span class="bu">print</span>(list1[:<span class="dv">2</span>])</a>
+<a class="sourceLine" id="cb10-14" title="14"><span class="co"># &gt;&gt; [1,2]</span></a>
+<a class="sourceLine" id="cb10-15" title="15"><span class="bu">print</span>(list1[<span class="dv">1</span>:<span class="dv">3</span>])</a>
+<a class="sourceLine" id="cb10-16" title="16"><span class="co"># &gt;&gt; [2,3]</span></a></code></pre></div>
+</div>
+<div id="section-13" class="section level3">
+<h3><span class="header-section-number">1.7.3</span> 增／删元素</h3>
+<p>1.增：</p>
+<ol style="list-style-type: decimal">
+<li>list1.append():括号内只能放入一个元素 (one argument, 不是索引，而是元素本身的内容)，该元素可以是列表或字典；也可以直接赋值。</li>
+<li>list1.extend():在某一列表末尾追加另一列表的值</li>
+</ol>
+<p><code>append()内只能放置一个元素，且作为一个单独的元素增加；extend()则是作为一个序列增加。</code></p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb11-1" title="1"></a>
+<a class="sourceLine" id="cb11-2" title="2">list1<span class="op">=</span>[<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>]</a>
+<a class="sourceLine" id="cb11-3" title="3">list1.append(<span class="dv">6</span>)</a>
+<a class="sourceLine" id="cb11-4" title="4"><span class="bu">print</span>(list1)</a>
+<a class="sourceLine" id="cb11-5" title="5"><span class="co"># &gt;&gt; [1,2,3,4,5,6]</span></a>
+<a class="sourceLine" id="cb11-6" title="6"></a>
+<a class="sourceLine" id="cb11-7" title="7"></a>
+<a class="sourceLine" id="cb11-8" title="8">list1.append(<span class="dv">6</span>,<span class="dv">7</span>)</a>
+<a class="sourceLine" id="cb11-9" title="9"><span class="bu">print</span>(list1)</a>
+<a class="sourceLine" id="cb11-10" title="10"><span class="co"># &gt;&gt; TypeError</span></a>
+<a class="sourceLine" id="cb11-11" title="11"><span class="co">#append() takes exactly one argument (2 given)</span></a>
+<a class="sourceLine" id="cb11-12" title="12"></a>
+<a class="sourceLine" id="cb11-13" title="13"></a>
+<a class="sourceLine" id="cb11-14" title="14">list1.append([<span class="dv">7</span>,<span class="dv">8</span>])</a>
+<a class="sourceLine" id="cb11-15" title="15"><span class="bu">print</span>(list1)</a>
+<a class="sourceLine" id="cb11-16" title="16"><span class="co"># &gt;&gt; [1,2,3,4,5,6,[7,8]]</span></a>
+<a class="sourceLine" id="cb11-17" title="17"></a>
+<a class="sourceLine" id="cb11-18" title="18"><span class="co">#若是extend()</span></a>
+<a class="sourceLine" id="cb11-19" title="19">list1.extend([<span class="dv">7</span>,<span class="dv">8</span>])</a>
+<a class="sourceLine" id="cb11-20" title="20"><span class="bu">print</span>(list1)</a>
+<a class="sourceLine" id="cb11-21" title="21"><span class="co"># &gt;&gt; [1,2,3,4,5,6,7,8]</span></a>
+<a class="sourceLine" id="cb11-22" title="22"></a>
+<a class="sourceLine" id="cb11-23" title="23">list1[<span class="dv">7</span>]<span class="op">=</span><span class="dv">9</span></a>
+<a class="sourceLine" id="cb11-24" title="24"><span class="bu">print</span>(list1)</a>
+<a class="sourceLine" id="cb11-25" title="25"><span class="co"># &gt;&gt; [1,2,3,4,5,6,[7,8],9]</span></a></code></pre></div>
+<p>2.删：</p>
+<ol style="list-style-type: decimal">
+<li>del:根据索引删除列表的元素，或者片段，或者整个列表（根据索引删除）。</li>
+<li>pop: A.pop(key), key可以是list1偏移量或者dictionary的key (<code>只能删除一个元素, a.pop()默认删除最后一个元素</code>)</li>
+</ol>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb12-1" title="1">a<span class="op">=</span>[<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>]</a>
+<a class="sourceLine" id="cb12-2" title="2"><span class="kw">del</span> a[<span class="dv">0</span>]</a>
+<a class="sourceLine" id="cb12-3" title="3"><span class="bu">print</span>(a)</a>
+<a class="sourceLine" id="cb12-4" title="4"><span class="co"># &gt;&gt; [2,3,4,5,6,7]</span></a>
+<a class="sourceLine" id="cb12-5" title="5"></a>
+<a class="sourceLine" id="cb12-6" title="6"><span class="co">#等同于</span></a>
+<a class="sourceLine" id="cb12-7" title="7">a.pop(<span class="dv">0</span>)</a>
+<a class="sourceLine" id="cb12-8" title="8"><span class="bu">print</span>(a)</a>
+<a class="sourceLine" id="cb12-9" title="9"></a>
+<a class="sourceLine" id="cb12-10" title="10"><span class="kw">del</span> a[<span class="dv">2</span>:<span class="dv">4</span>]</a>
+<a class="sourceLine" id="cb12-11" title="11"><span class="bu">print</span>(a)</a>
+<a class="sourceLine" id="cb12-12" title="12"><span class="co"># &gt;&gt; [2,3,6,7]</span></a>
+<a class="sourceLine" id="cb12-13" title="13"></a>
+<a class="sourceLine" id="cb12-14" title="14"><span class="kw">del</span> a[:] </a>
+<a class="sourceLine" id="cb12-15" title="15"><span class="bu">print</span>(a)</a>
+<a class="sourceLine" id="cb12-16" title="16"><span class="co"># &gt;&gt; [ ]</span></a>
+<a class="sourceLine" id="cb12-17" title="17"><span class="co"># del a[:] 等同于 del a</span></a></code></pre></div>
+</div>
+</div>
+<div id="tuple" class="section level2">
+<h2><span class="header-section-number">1.8</span> 元组tuple()</h2>
+<p>1.基本定义：用()，若只有一个元素，以<code>,</code>结尾，比如tup1(30,)
+1.元素提取：采用偏移量，tuple1[0:]
+1.用法：支持嵌套，argument元素不可变，元素类型可以多样
+1.<code>与list的区别在于，元组tuple的元素不可以变更</code></p>
+</div>
+<div id="section-14" class="section level2">
+<h2><span class="header-section-number">1.9</span> 字典</h2>
+<div id="section-15" class="section level3">
+<h3><span class="header-section-number">1.9.1</span> 基本定义</h3>
+<p>1.用{}表示；
+1.用<strong>,</strong>分割元素，有唯一的key，key和值用<strong>:</strong>隔开，值可以不唯一；</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb13-1" title="1">scores<span class="op">=</span>{<span class="st">&#39;小明&#39;</span>:<span class="dv">90</span>,<span class="st">&#39;小红&#39;</span>:<span class="dv">98</span>, <span class="st">&#39;小刚&#39;</span>:<span class="dv">90</span>}</a>
+<a class="sourceLine" id="cb13-2" title="2"><span class="bu">print</span>(scores)</a>
+<a class="sourceLine" id="cb13-3" title="3"><span class="bu">print</span>(<span class="bu">len</span>(scores))</a>
+<a class="sourceLine" id="cb13-4" title="4"><span class="co"># &gt;&gt;3</span></a></code></pre></div>
+<p><strong>note</strong>:以上的key为’小明’，‘小红’，‘小刚’;len()返回列表或字典的长度。</p>
+</div>
+<div id="section-16" class="section level3">
+<h3><span class="header-section-number">1.9.2</span> 提取元素</h3>
+<p>字典的索引：用key提取。</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb14-1" title="1">scores<span class="op">=</span>{<span class="st">&#39;小明&#39;</span>:<span class="dv">90</span>,<span class="st">&#39;小红&#39;</span>:<span class="dv">98</span>, <span class="st">&#39;小刚&#39;</span>:<span class="dv">90</span>}</a>
+<a class="sourceLine" id="cb14-2" title="2"><span class="bu">print</span>(scores[<span class="st">&#39;小明&#39;</span>])</a>
+<a class="sourceLine" id="cb14-3" title="3"><span class="co"># &gt;&gt; 90</span></a></code></pre></div>
+</div>
+<div id="section-17" class="section level3">
+<h3><span class="header-section-number">1.9.3</span> 增／删元素</h3>
+<p>1.增：dictionaryname[key]=value
+1.删：del dictionaryname[key]</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb15-1" title="1">album<span class="op">=</span>{<span class="st">&#39;Jay&#39;</span>:<span class="st">&#39;七里香&#39;</span>,<span class="st">&#39;Jolin&#39;</span>:<span class="st">&#39;倒带&#39;</span>}</a>
+<a class="sourceLine" id="cb15-2" title="2"><span class="kw">del</span> album[<span class="st">&#39;Jay&#39;</span>]</a>
+<a class="sourceLine" id="cb15-3" title="3"><span class="bu">print</span>(album)</a>
+<a class="sourceLine" id="cb15-4" title="4"><span class="co"># &gt;&gt; {&#39;Jolin&#39;:&#39;倒带&#39;}</span></a>
+<a class="sourceLine" id="cb15-5" title="5"></a>
+<a class="sourceLine" id="cb15-6" title="6">album[<span class="st">&#39;Jay&#39;</span>]<span class="op">=</span><span class="st">&#39;安静&#39;</span></a>
+<a class="sourceLine" id="cb15-7" title="7"><span class="bu">print</span>(album)</a>
+<a class="sourceLine" id="cb15-8" title="8"><span class="co"># &gt;&gt; {&#39;Jolin&#39;:&#39;倒带&#39;,&#39;Jay&#39;:&#39;安静&#39;}</span></a>
+<a class="sourceLine" id="cb15-9" title="9"><span class="bu">print</span>(album[<span class="st">&#39;Jay&#39;</span>])</a>
+<a class="sourceLine" id="cb15-10" title="10"><span class="co"># &gt;&gt; 安静</span></a></code></pre></div>
+</div>
+</div>
+<div id="section-18" class="section level2">
+<h2><span class="header-section-number">1.10</span> 列表和字典的对比</h2>
+<table>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"></th>
+<th align="center">列表list[1,2,3,4]</th>
+<th align="center">元组tuple(1,2,3,4)</th>
+<th align="center">字典dictionary{‘a’:1,‘b’:2}</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">定位方式</td>
+<td align="center">偏移量，list1[0]</td>
+<td align="center">偏移量，tuple1[0]</td>
+<td align="center">key, dict[‘a’]</td>
+</tr>
+<tr class="even">
+<td align="center">排列方式</td>
+<td align="center">按顺序依次排列</td>
+<td align="center">按顺序依次排列</td>
+<td align="center">根据key排序</td>
+</tr>
+<tr class="odd">
+<td align="center">增、删、修改</td>
+<td align="center">list.[new_key]=value, append(),extend(); del, pop(); key–&gt;value</td>
+<td align="center">元素不可更改</td>
+<td align="center">dict.[new_key]=value, append(),extend(); del, pop(); key–&gt;value</td>
+</tr>
+<tr class="even">
+<td align="center">可嵌套</td>
+<td align="center">可</td>
+<td align="center">可</td>
+<td align="center">可</td>
+</tr>
+</tbody>
+</table>
+<p>例子：</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb16-1" title="1">list11<span class="op">=</span>[<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>]</a>
+<a class="sourceLine" id="cb16-2" title="2"><span class="bu">print</span>(list11[<span class="dv">2</span>])</a>
+<a class="sourceLine" id="cb16-3" title="3"><span class="co"># &gt;&gt; 3</span></a>
+<a class="sourceLine" id="cb16-4" title="4">dictionary1<span class="op">=</span>{<span class="st">&#39;a&#39;</span>:<span class="dv">1</span>,<span class="st">&#39;b&#39;</span>:<span class="dv">1</span>,<span class="st">&#39;c&#39;</span>:<span class="dv">2</span>}</a>
+<a class="sourceLine" id="cb16-5" title="5"><span class="bu">print</span>(dictionary1[<span class="st">&#39;a&#39;</span>])</a>
+<a class="sourceLine" id="cb16-6" title="6"><span class="co"># &gt;&gt; 1</span></a>
+<a class="sourceLine" id="cb16-7" title="7"></a>
+<a class="sourceLine" id="cb16-8" title="8">list12<span class="op">=</span>[<span class="dv">5</span>,<span class="dv">4</span>,<span class="dv">3</span>,<span class="dv">2</span>,<span class="dv">1</span>]</a>
+<a class="sourceLine" id="cb16-9" title="9"><span class="bu">print</span>(list11 <span class="op">==</span> list12)</a>
+<a class="sourceLine" id="cb16-10" title="10"><span class="co"># &gt;&gt; false</span></a>
+<a class="sourceLine" id="cb16-11" title="11">dictionary2<span class="op">=</span>{<span class="st">&#39;c&#39;</span>:<span class="dv">2</span>,<span class="st">&#39;b&#39;</span>:<span class="dv">1</span>,<span class="st">&#39;a&#39;</span>:<span class="dv">1</span>}</a>
+<a class="sourceLine" id="cb16-12" title="12"><span class="bu">print</span>(dictionary1 <span class="op">==</span> dictionary2)</a>
+<a class="sourceLine" id="cb16-13" title="13"><span class="co"># &gt;&gt; true</span></a></code></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb17-1" title="1"><span class="co">#add</span></a>
+<a class="sourceLine" id="cb17-2" title="2">list1<span class="op">=</span>[<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>]</a>
+<a class="sourceLine" id="cb17-3" title="3">list1[<span class="dv">3</span>]<span class="op">=</span><span class="dv">4</span></a>
+<a class="sourceLine" id="cb17-4" title="4"><span class="bu">print</span>(list1)</a>
+<a class="sourceLine" id="cb17-5" title="5"><span class="co"># &gt;&gt; [1,2,3,4]</span></a>
+<a class="sourceLine" id="cb17-6" title="6">dictionary<span class="op">=</span>{<span class="st">&#39;a&#39;</span>:<span class="dv">1</span>,<span class="st">&#39;b&#39;</span>:<span class="dv">2</span>}</a>
+<a class="sourceLine" id="cb17-7" title="7">dictionary[<span class="st">&#39;c&#39;</span>]<span class="op">=</span><span class="dv">3</span></a>
+<a class="sourceLine" id="cb17-8" title="8"><span class="bu">print</span>(dictionary)</a>
+<a class="sourceLine" id="cb17-9" title="9"><span class="co"># &gt;&gt; {&#39;a&#39;:1,&#39;b&#39;:2,&#39;c&#39;:3}</span></a>
+<a class="sourceLine" id="cb17-10" title="10"></a>
+<a class="sourceLine" id="cb17-11" title="11"><span class="co">#delete</span></a>
+<a class="sourceLine" id="cb17-12" title="12"><span class="kw">del</span> list1[<span class="dv">3</span>]</a>
+<a class="sourceLine" id="cb17-13" title="13"><span class="bu">print</span>(list1)</a>
+<a class="sourceLine" id="cb17-14" title="14"><span class="co"># &gt;&gt; [1,2,3]</span></a>
+<a class="sourceLine" id="cb17-15" title="15"><span class="kw">del</span> dictionary[<span class="st">&#39;a&#39;</span>]</a>
+<a class="sourceLine" id="cb17-16" title="16"><span class="bu">print</span>(dictionary)</a>
+<a class="sourceLine" id="cb17-17" title="17"><span class="co"># &gt;&gt; {&#39;b&#39;:2,&#39;c&#39;:3}</span></a>
+<a class="sourceLine" id="cb17-18" title="18"></a>
+<a class="sourceLine" id="cb17-19" title="19"><span class="co">#nest</span></a>
+<a class="sourceLine" id="cb17-20" title="20"><span class="co">#先取最外层的定位，再取第二层，...，剥洋葱式解法</span></a>
+<a class="sourceLine" id="cb17-21" title="21">numbers<span class="op">=</span>[[<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>],[<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>,<span class="dv">8</span>]]</a>
+<a class="sourceLine" id="cb17-22" title="22"><span class="bu">print</span>(numbers[<span class="dv">1</span>][<span class="dv">3</span>])</a>
+<a class="sourceLine" id="cb17-23" title="23"><span class="co"># &gt;&gt; 8</span></a>
+<a class="sourceLine" id="cb17-24" title="24">groups<span class="op">=</span>{<span class="st">&#39;first&#39;</span>:{<span class="st">&#39;a&#39;</span>:<span class="dv">1</span>,<span class="st">&#39;b&#39;</span>:<span class="dv">2</span>,<span class="st">&#39;c&#39;</span>:<span class="dv">3</span>},<span class="st">&#39;second&#39;</span>:{<span class="st">&#39;d&#39;</span>:<span class="dv">4</span>,<span class="st">&#39;e&#39;</span>:<span class="dv">5</span>,<span class="st">&#39;f&#39;</span>:<span class="dv">6</span>}}</a>
+<a class="sourceLine" id="cb17-25" title="25"><span class="bu">print</span>(groups[<span class="st">&#39;second&#39;</span>][<span class="st">&#39;e&#39;</span>])</a>
+<a class="sourceLine" id="cb17-26" title="26"><span class="co"># &gt;&gt; 5</span></a></code></pre></div>
+</div>
+<div id="forin" class="section level2">
+<h2><span class="header-section-number">1.11</span> for…in…循环语句</h2>
+<p><code>循环：执行重复性或规律性的任务</code></p>
+<p>1.格式：冒号；缩进；重复执行的job
+1.可以作为i的取值：string、list、dictionary（int、float不可以）；</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb18-1" title="1"><span class="cf">for</span> i <span class="kw">in</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>]:</a>
+<a class="sourceLine" id="cb18-2" title="2">  <span class="bu">print</span>(i<span class="op">*</span><span class="dv">5</span>)</a>
+<a class="sourceLine" id="cb18-3" title="3"><span class="co">#output：5 10 15 20</span></a>
+<a class="sourceLine" id="cb18-4" title="4"></a>
+<a class="sourceLine" id="cb18-5" title="5"><span class="cf">for</span> i <span class="kw">in</span> 5：</a>
+<a class="sourceLine" id="cb18-6" title="6">  <span class="bu">print</span>(i)</a>
+<a class="sourceLine" id="cb18-7" title="7"><span class="co"># &gt;&gt; error</span></a>
+<a class="sourceLine" id="cb18-8" title="8"></a>
+<a class="sourceLine" id="cb18-9" title="9"><span class="cf">for</span> i <span class="kw">in</span> <span class="fl">5.2</span>:</a>
+<a class="sourceLine" id="cb18-10" title="10">  <span class="bu">print</span>(i)</a>
+<a class="sourceLine" id="cb18-11" title="11"><span class="co"># &gt;&gt; error</span></a>
+<a class="sourceLine" id="cb18-12" title="12"></a>
+<a class="sourceLine" id="cb18-13" title="13">dic<span class="op">=</span>{<span class="st">&#39;a&#39;</span>:<span class="st">&#39;1&#39;</span>,<span class="st">&#39;b&#39;</span>:<span class="st">&#39;3&#39;</span>,<span class="st">&#39;c&#39;</span>:<span class="st">&#39;5&#39;</span>}</a>
+<a class="sourceLine" id="cb18-14" title="14"><span class="cf">for</span> i <span class="kw">in</span> dic:</a>
+<a class="sourceLine" id="cb18-15" title="15">  <span class="bu">print</span>(dic[i])</a>
+<a class="sourceLine" id="cb18-16" title="16"><span class="co"># &gt;&gt;1 3 5</span></a>
+<a class="sourceLine" id="cb18-17" title="17"><span class="co">#这里的i是dic的key，按顺序提取。</span></a>
+<a class="sourceLine" id="cb18-18" title="18"></a>
+<a class="sourceLine" id="cb18-19" title="19"><span class="cf">for</span> i <span class="kw">in</span> <span class="st">&#39;abc&#39;</span></a>
+<a class="sourceLine" id="cb18-20" title="20">  <span class="bu">print</span>(i)</a>
+<a class="sourceLine" id="cb18-21" title="21"><span class="co"># &gt;&gt; a b c</span></a>
+<a class="sourceLine" id="cb18-22" title="22"><span class="co">#逐字读取</span></a>
+<a class="sourceLine" id="cb18-23" title="23"></a>
+<a class="sourceLine" id="cb18-24" title="24"><span class="cf">for</span> i <span class="kw">in</span> <span class="st">&#39;abc&#39;</span></a>
+<a class="sourceLine" id="cb18-25" title="25">  <span class="bu">print</span>(i)</a>
+<a class="sourceLine" id="cb18-26" title="26"><span class="bu">print</span>(i)</a>
+<a class="sourceLine" id="cb18-27" title="27"><span class="co"># &gt;&gt; a b c c</span></a>
+<a class="sourceLine" id="cb18-28" title="28"><span class="co">#未缩进的print执行的是i在最后的取值，也就是在执行完for循环后，当前的i值。</span></a></code></pre></div>
+<p>error的部分可以改为：</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb19-1" title="1"><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">str</span>(<span class="dv">5</span>)：</a>
+<a class="sourceLine" id="cb19-2" title="2">  <span class="bu">print</span>(i)</a>
+<a class="sourceLine" id="cb19-3" title="3"><span class="co"># &gt;&gt; 5</span></a>
+<a class="sourceLine" id="cb19-4" title="4"></a>
+<a class="sourceLine" id="cb19-5" title="5"><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">str</span>(<span class="fl">5.2</span>):</a>
+<a class="sourceLine" id="cb19-6" title="6">  <span class="bu">print</span>(i)</a>
+<a class="sourceLine" id="cb19-7" title="7"><span class="co"># &gt;&gt; 5 . 2</span></a>
+<a class="sourceLine" id="cb19-8" title="8"><span class="co">#逐字读取</span></a></code></pre></div>
+<div id="range" class="section level3">
+<h3><span class="header-section-number">1.11.1</span> 与range()函数配合</h3>
+<p>1.range(x): 0 ~ x-1 的整数序列;
+1.range(a,b):a,…,b-1 （与偏移量一致，取头不取尾）
+1.range(a,b,c):a,…,b-1 每个数间隔为c (不填时默认为1)</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb20-1" title="1"><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>):</a>
+<a class="sourceLine" id="cb20-2" title="2">  <span class="bu">print</span>(i)</a>
+<a class="sourceLine" id="cb20-3" title="3"><span class="co"># &gt;&gt; 0,1,2</span></a>
+<a class="sourceLine" id="cb20-4" title="4"></a>
+<a class="sourceLine" id="cb20-5" title="5"><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>):</a>
+<a class="sourceLine" id="cb20-6" title="6">  <span class="bu">print</span>(<span class="st">&#39;我真优秀！&#39;</span>)</a>
+<a class="sourceLine" id="cb20-7" title="7"><span class="co"># &gt;&gt; 我真优秀！ 我真优秀！ 我真优秀！</span></a>
+<a class="sourceLine" id="cb20-8" title="8"><span class="co">#可以作为重复执行的次数。</span></a>
+<a class="sourceLine" id="cb20-9" title="9"></a>
+<a class="sourceLine" id="cb20-10" title="10"><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>,<span class="dv">10</span>,<span class="dv">3</span>):</a>
+<a class="sourceLine" id="cb20-11" title="11">  <span class="bu">print</span>(i)</a>
+<a class="sourceLine" id="cb20-12" title="12"><span class="co"># &gt;&gt; 0 3 6 9</span></a></code></pre></div>
+</div>
+</div>
+<div id="while" class="section level2">
+<h2><span class="header-section-number">1.12</span> while循环</h2>
+<p>1.先赋值，后进条件，最后执行重复job；</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb21-1" title="1">a<span class="op">=</span><span class="dv">0</span></a>
+<a class="sourceLine" id="cb21-2" title="2"><span class="cf">while</span> a<span class="op">&lt;</span><span class="dv">5</span>:</a>
+<a class="sourceLine" id="cb21-3" title="3">  a<span class="op">=</span>a<span class="op">+</span><span class="dv">1</span></a>
+<a class="sourceLine" id="cb21-4" title="4">  <span class="bu">print</span>(a)</a>
+<a class="sourceLine" id="cb21-5" title="5"><span class="co"># &gt;&gt; 1 2 3 4 5</span></a></code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb22-1" title="1"></a>
+<a class="sourceLine" id="cb22-2" title="2">man <span class="op">=</span> <span class="st">&#39;&#39;</span>  <span class="co"># 注：&#39;&#39;代表空字符串</span></a>
+<a class="sourceLine" id="cb22-3" title="3"><span class="cf">while</span> man <span class="op">!=</span> <span class="st">&#39;有&#39;</span>:  <span class="co">#注：!=代表不等于</span></a>
+<a class="sourceLine" id="cb22-4" title="4">  man <span class="op">=</span> <span class="bu">input</span>(<span class="st">&#39;有没有愿意为小龙女死的男人？没有的话就不能出古墓。&#39;</span>)</a>
+<a class="sourceLine" id="cb22-5" title="5"><span class="bu">print</span>(<span class="st">&#39;小龙女可以出古墓门下山啦~&#39;</span>)</a>
+<a class="sourceLine" id="cb22-6" title="6"></a>
+<a class="sourceLine" id="cb22-7" title="7"><span class="co">#以上表示，如果input部分一直没有出现&#39;有&#39;，则会一直执行while的job；当出现了&#39;有&#39;，就不进入while循环，而是直接执行下一句print。</span></a></code></pre></div>
+</div>
+<div id="forinwhile" class="section level2">
+<h2><span class="header-section-number">1.13</span> for…in…和while…异同点</h2>
+<p><img src="figure/01-04-for-while.png" /><!-- --></p>
+<p><code>已知循环次数用for, 未知循环次数用while。</code></p>
+</div>
+<div id="section-19" class="section level2">
+<h2><span class="header-section-number">1.14</span> 布尔值：用数据做判断</h2>
+<div id="truefalse" class="section level3">
+<h3><span class="header-section-number">1.14.1</span> True和False（注意区分大小写）</h3>
+<div class="sourceCode" id="cb23"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb23-1" title="1"><span class="co">#只执行一次</span></a>
+<a class="sourceLine" id="cb23-2" title="2"><span class="cf">if</span> <span class="va">True</span>:</a>
+<a class="sourceLine" id="cb23-3" title="3">  ...</a>
+<a class="sourceLine" id="cb23-4" title="4"></a>
+<a class="sourceLine" id="cb23-5" title="5"></a>
+<a class="sourceLine" id="cb23-6" title="6"><span class="co">#可重复执行  </span></a>
+<a class="sourceLine" id="cb23-7" title="7"><span class="cf">while</span> <span class="va">True</span>:</a>
+<a class="sourceLine" id="cb23-8" title="8">  ...</a>
+<a class="sourceLine" id="cb23-9" title="9"></a>
+<a class="sourceLine" id="cb23-10" title="10"></a>
+<a class="sourceLine" id="cb23-11" title="11"><span class="co">#试试False</span></a>
+<a class="sourceLine" id="cb23-12" title="12"><span class="cf">while</span> <span class="va">False</span>:</a>
+<a class="sourceLine" id="cb23-13" title="13">  <span class="bu">print</span>(<span class="st">&#39;while False&#39;</span>)</a>
+<a class="sourceLine" id="cb23-14" title="14">  </a>
+<a class="sourceLine" id="cb23-15" title="15"><span class="co"># &gt;&gt; </span></a>
+<a class="sourceLine" id="cb23-16" title="16"><span class="co"># while False 不执行循环语句</span></a>
+<a class="sourceLine" id="cb23-17" title="17"></a>
+<a class="sourceLine" id="cb23-18" title="18">  </a></code></pre></div>
+</div>
+<div id="section-20" class="section level3">
+<h3><span class="header-section-number">1.14.2</span> 总结</h3>
+<p><img src="figure/01-05-boolean.png" /><!-- --></p>
+<p><img src="figure/01-05-boolean-calculate1.png" /><!-- --></p>
+<p><img src="figure/01-05-boolean-calculate2.png" /><!-- --></p>
+<p><img src="figure/01-05-boolean-calculate3.png" /><!-- --></p>
+<p><strong>用数值做运算：同一个数据类型，除了假的（0，空，False等），其他都为真</strong></p>
+</div>
+</div>
+<div id="section-21" class="section level2">
+<h2><span class="header-section-number">1.15</span> 四种语句</h2>
+<div id="break" class="section level3">
+<h3><span class="header-section-number">1.15.1</span> break语句</h3>
+<p><strong>只能在循环内使用</strong>
+<strong>表示：while循环语句中，满足if条件时，则跳出循环</strong></p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb24-1" title="1"></a>
+<a class="sourceLine" id="cb24-2" title="2"><span class="cf">if</span>...:</a>
+<a class="sourceLine" id="cb24-3" title="3">  <span class="cf">break</span></a>
+<a class="sourceLine" id="cb24-4" title="4"></a>
+<a class="sourceLine" id="cb24-5" title="5"><span class="co">#若符合if条件，则跳出循环：</span></a>
+<a class="sourceLine" id="cb24-6" title="6"></a>
+<a class="sourceLine" id="cb24-7" title="7"><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>,<span class="dv">5</span>):</a>
+<a class="sourceLine" id="cb24-8" title="8">  <span class="bu">print</span>(<span class="st">&#39;你是猪头！&#39;</span>)</a>
+<a class="sourceLine" id="cb24-9" title="9">  <span class="cf">if</span> i<span class="op">==</span><span class="dv">3</span>:</a>
+<a class="sourceLine" id="cb24-10" title="10">    <span class="cf">break</span></a>
+<a class="sourceLine" id="cb24-11" title="11"><span class="co">#&gt;&gt; 只打印3次 你是猪头！</span></a>
+<a class="sourceLine" id="cb24-12" title="12"></a>
+<a class="sourceLine" id="cb24-13" title="13">i<span class="op">=</span><span class="dv">1</span></a>
+<a class="sourceLine" id="cb24-14" title="14"><span class="cf">while</span> i<span class="op">&lt;</span><span class="dv">5</span>:</a>
+<a class="sourceLine" id="cb24-15" title="15">  <span class="bu">print</span>(<span class="st">&#39;你是猪头！&#39;</span>)</a>
+<a class="sourceLine" id="cb24-16" title="16">  i <span class="op">+=</span> <span class="dv">1</span></a>
+<a class="sourceLine" id="cb24-17" title="17"><span class="co"># i = i+1 等同于 i += 1</span></a>
+<a class="sourceLine" id="cb24-18" title="18">  <span class="cf">if</span> i<span class="op">==</span><span class="dv">3</span>:</a>
+<a class="sourceLine" id="cb24-19" title="19">    <span class="cf">break</span></a>
+<a class="sourceLine" id="cb24-20" title="20"><span class="co">#&gt;&gt; 只打印3次 你是猪头！</span></a></code></pre></div>
+</div>
+<div id="continue" class="section level3">
+<h3><span class="header-section-number">1.15.2</span> continue语句</h3>
+<p><strong>只能在循环内使用</strong>
+<strong>表示：while循环语句中，满足if条件时，则暂停目前的循环语句，重新开始循环</strong></p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb25-1" title="1"></a>
+<a class="sourceLine" id="cb25-2" title="2"><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>,<span class="dv">5</span>):</a>
+<a class="sourceLine" id="cb25-3" title="3">  <span class="bu">print</span>(<span class="st">&#39;你是世界第&#39;</span>,i,<span class="st">&#39;大猪头！&#39;</span>)</a>
+<a class="sourceLine" id="cb25-4" title="4">  <span class="cf">if</span> i <span class="op">==</span><span class="dv">3</span>:</a>
+<a class="sourceLine" id="cb25-5" title="5">    <span class="cf">continue</span></a>
+<a class="sourceLine" id="cb25-6" title="6"></a>
+<a class="sourceLine" id="cb25-7" title="7"><span class="co">#&gt;&gt; 打印 第1，2，4 ，不打印3</span></a>
+<a class="sourceLine" id="cb25-8" title="8"></a>
+<a class="sourceLine" id="cb25-9" title="9"><span class="cf">while</span> ...:</a>
+<a class="sourceLine" id="cb25-10" title="10">  ...</a>
+<a class="sourceLine" id="cb25-11" title="11">  <span class="cf">if</span> ...:</a>
+<a class="sourceLine" id="cb25-12" title="12">    <span class="cf">continue</span></a>
+<a class="sourceLine" id="cb25-13" title="13">    </a>
+<a class="sourceLine" id="cb25-14" title="14"><span class="co">#同上</span></a></code></pre></div>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+},
+"search": false
+});
+});
+</script>
+
+</body>
+
+</html>

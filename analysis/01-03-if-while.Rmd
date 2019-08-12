@@ -1,38 +1,85 @@
+# 条件语句
+
+## if 条件判断
+
+### 条件判断
+
+1.单向判断: if
+
+1.双向判断: if...else(不需加条件，表示其他)...
+
+1.多向判断: if...elif...(else...)
+
+**note**: `...`的内容需要缩进。
+
+### 嵌套
+
+作为嵌套，需在上一层if的基础上缩进。
+
+```{r}
+include_graphics(here::here("figure/01-03-if.png"))
+```
+
+
+```python
+#赋值：
+number=input('请输入今天你吃的苹果数量：')
+
+#进入嵌套式条件判断：
+if int(number)<2:
+  print('您今日的进食不过量。')
+  if int(number)==0:
+    print('您今日需要吃个苹果。')
+  else:
+    print('您今日吃的苹果刚刚好，么么哒。')
+else:
+  print('您再吃就会变成猪，会被杀掉的。')
+
+print('反正无论你吃几个苹果，都改变不了你是猪的本质哈哈哈哈哈。判断完毕。')
+
+```
+
+# 循环语句
+
 ## for...in...循环语句
 
-`循环：执行重复性或规律性的任务`
+**循环：执行重复性或规律性的任务**
+**确定重复次数**
+
+### 基本定义
 
 1.格式：冒号；缩进；重复执行的job
+
 1.可以作为i的取值：string、list、dictionary（int、float不可以）；
 
 ```python
 for i in [1,2,3,4]:
   print(i*5)
-#output：5 10 15 20
+>> 5 10 15 20
 
 for i in 5：
   print(i)
-# >> error
+>> error
 
 for i in 5.2:
   print(i)
-# >> error
+>> error
 
 dic={'a':'1','b':'3','c':'5'}
 for i in dic:
   print(dic[i])
-# >>1 3 5
+>> 1 3 5
 #这里的i是dic的key，按顺序提取。
 
 for i in 'abc'
   print(i)
-# >> a b c
+>> a b c
 #逐字读取
 
 for i in 'abc'
   print(i)
 print(i)
-# >> a b c c
+>> a b c c
 #未缩进的print执行的是i在最后的取值，也就是在执行完for循环后，当前的i值。
 
 ```
@@ -41,39 +88,46 @@ error的部分可以改为：
 ```python
 for i in str(5)：
   print(i)
-# >> 5
+>> 5
 
 for i in str(5.2):
   print(i)
-# >> 5 . 2
+>> 5 . 2
 #逐字读取
 
 ```
 
 ### 与range()函数配合
 
-1.range(x): 0 ~ x-1 的整数序列;
+1.range(x): 0 ~ x-1 的整数序列（表示取[0,x)的整数）;
 1.range(a,b):a,...,b-1 （与偏移量一致，取头不取尾）
 1.range(a,b,c):a,...,b-1 每个数间隔为c (不填时默认为1)
 
 ```python
 for i in range(3):
   print(i)
-# >> 0,1,2
+>> 0,1,2
 
 for i in range(3):
   print('我真优秀！')
-# >> 我真优秀！ 我真优秀！ 我真优秀！
+>> 我真优秀！ 
+我真优秀！
+我真优秀！
 #可以作为重复执行的次数。
 
 for i in range(0,10,3):
   print(i)
-# >> 0 3 6 9
+>> 0 3 6 9
 
 ```
+
 ## while循环
 
-1.先赋值，后进条件，最后执行重复job；
+先赋值，后进条件，最后执行重复job。
+
+**条件为确定的某一范围，剩下的为开放性范围。**
+
+**也可以执行重复性任务。**
 
 
 ```python
@@ -81,7 +135,7 @@ a=0
 while a<5:
   a=a+1
   print(a)
-# >> 1 2 3 4 5
+>> 1 2 3 4 5
 
 ```
 
@@ -96,10 +150,10 @@ print('小龙女可以出古墓门下山啦~')
 
 ```
 
-## for...in...和while...异同点
+### for...in...和while...异同点
+
+**已知循环次数用for, 未知循环次数用while。**
 
 ```{r}
-include_graphics(here::here("figure/01-04-for-while.png"))
+include_graphics(here::here("figure/01-03-for-while.png"))
 ```
-
-`已知循环次数用for, 未知循环次数用while。`

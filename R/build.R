@@ -1,4 +1,4 @@
-# From nintendo_switch_mario R folder
+# From python_tutoring R folder
 # cp it!
 source(here::here("R/load.R"))
 
