@@ -1,0 +1,98 @@
+## 布尔值：用数据做判断
+
+### True和False（注意区分大小写）
+
+```python
+#只执行一次
+if True:
+  ...
+
+
+#可重复执行  
+while True:
+  ...
+
+
+#试试False
+while False:
+  print('while False')
+  
+# >> 
+# while False 不执行循环语句
+
+  
+```
+
+### 总结
+
+```{r}
+include_graphics(here::here("figure/01-05-boolean.png"))
+```
+
+```{r}
+include_graphics(here::here("figure/01-05-boolean-calculate1.png"))
+```
+
+```{r}
+include_graphics(here::here("figure/01-05-boolean-calculate2.png"))
+```
+
+```{r}
+include_graphics(here::here("figure/01-05-boolean-calculate3.png"))
+```
+
+**用数值做运算：同一个数据类型，除了假的（0，空，False等），其他都为真**
+
+
+## 四种语句
+
+### break语句
+
+**只能在循环内使用**
+**表示：while循环语句中，满足if条件时，则跳出循环**
+
+```python
+
+if...:
+  break
+
+#若符合if条件，则跳出循环：
+
+for i in range(1,5):
+  print('你是猪头！')
+  if i==3:
+    break
+#>> 只打印3次 你是猪头！
+
+i=1
+while i<5:
+  print('你是猪头！')
+  i += 1
+# i = i+1 等同于 i += 1
+  if i==3:
+    break
+#>> 只打印3次 你是猪头！
+```
+
+### continue语句
+
+**只能在循环内使用**
+**表示：while循环语句中，满足if条件时，则暂停目前的循环语句，重新开始循环**
+
+```python
+
+for i in range(1,5):
+  print('你是世界第',i,'大猪头！')
+  if i ==3:
+    continue
+
+#>> 打印 第1，2，4 ，不打印3
+
+while ...:
+  ...
+  if ...:
+    continue
+    
+#同上
+
+```

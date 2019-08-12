@@ -1,37 +1,23 @@
-
 # library -----------------------------------------------------------------
 
 library(tidyverse)
-library(magrittr)
 library(fs)
-library(xfun)
-library(knitr)
 library(glue)
-library(usethis)
+library(rio)
+library(here)
 
-# impala ------------------------------------------------------------------
+## rmarkdown -------------------------------------------------------------
 
-if (!sessioninfo::os_name() %>% str_detect("Ubuntu")) {
-    library(RODBC)
-    impala <- RODBC::odbcConnect("Impala")
-}
-# source(here::here("../learn_hive/safely-run-impala/impala_in_r.R"),encoding = "UTF-8")
-
-source(here::here("R/run_impala.R"))
-source(here::here("R/run_batch_process.R"))
-
-
-# text --------------------------------------------------------------------
-
-library(stringi)
-
-
-# dev ---------------------------------------------------------------------
-
-library(usethis)
+library(knitr)
+library(kableExtra)
+library(markdown)
 
 
 
-# eda ---------------------------------------------------------------------
+# souce custom func -------------------------------------------------------
 
-library(inspectdf)
+# here("R") %>% dir_info() %>% 
+#     filter(!path %>% str_detect('load.R')) %>% 
+#     mutate(
+#         source = map(path,source)
+#     )
