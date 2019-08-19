@@ -51,7 +51,7 @@ include_graphics(here::here("figure/01-04-boolean-calculate3.png"))
 ### break语句
 
 **只能在循环内使用**
-**表示：while循环语句中，满足if条件时，则跳出循环**
+**表示：while循环语句中，满足if条件时，则跳出循环**。
 
 ```python
 

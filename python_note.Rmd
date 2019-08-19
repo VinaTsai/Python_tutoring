@@ -30,13 +30,13 @@ a = fs::dir_info("analysis", regexp = "\\.Rmd$") %>%
 
 ```{r,child='analysis/00-intro.Rmd'}
 ```
-```{r,child='analysis/01-01-print-type.Rmd'}
+```{r,child='analysis/01-01-print-input.Rmd'}
 ```
-```{r,child='analysis/01-02-if-input.Rmd'}
+```{r,child='analysis/01-02-type.Rmd'}
 ```
-```{r,child='analysis/01-03-list-dictionary.Rmd'}
+```{r,child='analysis/01-03-if-while.Rmd'}
 ```
-```{r,child='analysis/01-04-for-while.Rmd'}
+```{r,child='analysis/01-04-boolean.Rmd'}
 ```
 ```{r,child='analysis/01-05-boolean.Rmd'}
 ```
